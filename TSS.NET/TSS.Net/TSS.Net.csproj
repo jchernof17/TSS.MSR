@@ -14,6 +14,11 @@
     <NixTarget Condition="$(RuntimeIdentifier.Contains('linux')) Or '$(OS)' == 'Unix' Or '$(OS)' == 'Linux'">true</NixTarget>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<AnalysisMode>none</AnalysisMode>
+		<AnalysisLevel>none</AnalysisLevel>
+	</PropertyGroup>
+
   <!-- delay sign the assembly for Release build -->
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <AssemblyOriginatorKeyFile>..\35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
